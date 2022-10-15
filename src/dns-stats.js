@@ -24,17 +24,17 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
  function getDNSStats(domains) {
   return domains.reduce((acc, cur) => {
-    let subDomen = '';
+    let domen2 = '';
     cur
       .split('.')
       .reverse()
       .map(item => '.' + item)
       .forEach(item => {
-        subDomen += item;
-        if (acc[subDomen]) {
-          acc[subDomen]++;
+        domen2 += item;
+        if (acc[domen2]) {
+          acc[domen2]++;
         } else {
-          acc[subDomen] = 1;
+          acc[domen2] = 1;
         }
       });
     return acc;

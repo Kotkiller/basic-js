@@ -6,21 +6,21 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  * @param {Number} n
  * @return {Number}
- *
+ *a
  * @example
  * For n = 152, the output should be 52
  *
  */
  function deleteDigit(n) {
-  const result = n
+  const res = n
     .toString()
     .split('')
     .map((item, i) => {
-      const arr = n.toString().split('');
-      arr.splice(i, 1);
-      return +arr.join('');
+      const a = n.toString().split('');
+      a.splice(i, 1);
+      return +a.join('');
     });
-  return Math.max(...result);
+  return Math.max(...res);
 }
 
 module.exports = {
